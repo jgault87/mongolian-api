@@ -11,7 +11,9 @@
     "heroku-postbuild": "node utils/seed.js"
   },
   "dependencies": {
+    "dayjs": "^1.11.3",
     "express": "^4.17.1",
+    "install": "^0.13.0",
     "mongoose": "^6.0.13"
   },
   "devDependencies": {
