@@ -1,6 +1,6 @@
 {
-  "name": "28-Stu_Mini-Project",
-  "version": "1.0.1",
+  "name": "mongolian-api",
+  "version": "1.0",
   "description": "Mongoose back-end project - Main",
   "main": "index.js",
   "license": "MIT",
@@ -13,7 +13,6 @@
   "dependencies": {
     "dayjs": "^1.11.3",
     "express": "^4.17.1",
-    "install": "^0.13.0",
     "mongoose": "^6.0.13"
   },
   "devDependencies": {
