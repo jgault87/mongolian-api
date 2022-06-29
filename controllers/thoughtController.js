@@ -1,7 +1,7 @@
 const { User, Thought, Reaction } = require('../models');
 
 module.exports = {
-  // Get all courses
+  // Get all thoughts
   getThoughts(req, res) {
     Thought.find()
       .then((thoughts) => res.json(thoughts))
