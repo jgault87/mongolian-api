@@ -1,27 +1,42 @@
-const { Course, Student } = require('../models');
+const { User, Thought, Reaction } = require('../models');
 
 module.exports = {
   // Get all courses
-  getCourses(req, res) {
-    Course.find()
-      .then((courses) => res.json(courses))
+  getThoughts(req, res) {
+    Thought.find()
+      .then((thoughts) => res.json(thoughts))
       .catch((err) => res.status(500).json(err));
   },
-  // Get a course
-  getSingleCourse(req, res) {
-    Course.findOne({ _id: req.params.courseId })
+  // Get a single thought
+  getSingleThought(req, res) {
+    Thought.findOne({ _id: req.params.thoughtId })
       .select('-__v')
-      .then((course) =>
-        !course
-          ? res.status(404).json({ message: 'No course with that ID' })
-          : res.json(course)
+      .then((thought) =>
+        !thought
+          ? res.status(404).json({ message: 'No thought with that ID' })
+          : res.json(thought)
       )
       .catch((err) => res.status(500).json(err));
   },
-  // Create a course
-  createCourse(req, res) {
-    Course.create(req.body)
-      .then((course) => res.json(course))
+  // Create a thot
+  createThought(req, res) {
+    Thought.create(req.body)
+      .then((thought) => {
+       return User.findOneAndUpdate(
+        {username: thought.username },
+        { $addToSet: { thoughts: thought._id } },
+        { runValidators: true, new: true }
+       );
+
+      })
+      .then((user) =>
+				!user
+					? res.status(404).json({
+							message:
+								'thought created / no user assigned to ID'
+					  })
+					: res.json('thought assigned to user ID')
+			)
       .catch((err) => {
         console.log(err);
         return res.status(500).json(err);
