@@ -15,7 +15,34 @@ connection.once('open', async () => {
 
   //create seed data for users and thoughts
   const thoughts = [
-   {}
+   {
+    thoughtText: 'wine is good for you',
+    username: 'bethsmith'
+   },
+   {
+    thoughtText: 'wine is good for you',
+    username: 'godzilla'
+   },
+   {
+    thoughtText: 'wine is good for you',
+    username: 'jgault'
+   },
+   {
+    thoughtText: 'wine is good for you',
+    username: 'theonetruemorty'
+   },
+   {
+    thoughtText: 'wine is good for you',
+    username: 'kingkong'
+   },
+   {
+    thoughtText: 'wine is good for you',
+    username: 'summersmith'
+   },
+   {
+    thoughtText: 'wine is good for you',
+    username: 'ricksanchez'
+   }
   ];
 
   const users = [
