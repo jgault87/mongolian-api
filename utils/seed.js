@@ -14,11 +14,11 @@ connection.once('open', async () => {
   await Thought.deleteMany({});
 
   //create seed data for users and thoughts
-  const users = [
+  const thoughts = [
    {}
   ];
 
-  const thoughts = [
+  const users = [
     {
       username: 'jgault',
       email: 'jgault@gmail.com'
