@@ -20,27 +20,27 @@ connection.once('open', async () => {
     username: 'bethsmith'
    },
    {
-    thoughtText: 'wine is good for you',
+    thoughtText: 'destroying cities is good for you',
     username: 'godzilla'
    },
    {
-    thoughtText: 'wine is good for you',
+    thoughtText: 'hiking is good for you',
     username: 'jgault'
    },
    {
-    thoughtText: 'wine is good for you',
+    thoughtText: 'crying is good for you',
     username: 'theonetruemorty'
    },
    {
-    thoughtText: 'wine is good for you',
+    thoughtText: 'climbing is good for you',
     username: 'kingkong'
    },
    {
-    thoughtText: 'wine is good for you',
+    thoughtText: 'adventure is good for you',
     username: 'summersmith'
    },
    {
-    thoughtText: 'wine is good for you',
+    thoughtText: 'inventing is good for you',
     username: 'ricksanchez'
    }
   ];
