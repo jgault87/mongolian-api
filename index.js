@@ -18,6 +18,6 @@ app.use(routes);
 
 db.once('open', () => {
   app.listen(PORT, () => {
-    console.log(`Now listening at http://localhost:${PORT}/api/students 🚀`);
+    console.log(`Now listening at http://localhost:${PORT}/api/users 🚀`);
   });
 });

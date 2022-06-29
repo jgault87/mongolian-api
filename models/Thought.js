@@ -22,10 +22,12 @@ const thoughtSchema = new Schema(
     reactions: [reactionSchema],
   },
   {
+    timestamps: true,
+    id: false,
     toJSON: {
       virtuals: true,
     },
-    id: false,
+    
   }
 );
 
