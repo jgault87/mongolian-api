@@ -17,17 +17,14 @@ const reactionSchema = new Schema(
 			type: String,
 			required: true
 		},
-    // score: {
-    //   type: Number,
-    //   required: true,
-    //   default: () => Math.floor(Math.random() * (100 - 70 + 1) + 70),
-    // },
+    
     createdAt: {
 			type: Date,
       default: Date.now(),
 		}
   },
   {
+    timestamps: true,
     toJSON: {
       getters: true,
     },

@@ -43,7 +43,7 @@ module.exports = {
           ? res.status(404).json({ message: "No user was found with that ID!" })
           : Thought.deleteMany({ _id: { $in: user.thoughts } })
       )
-      .then(() => res.json({ message: 'user and associated thoughts deleted successfully' }))
+      .then(() => res.json({ message: `user and associated thoughts deleted successfully` }))
       
       .catch((err) => {
         console.log(err);
@@ -69,10 +69,9 @@ module.exports = {
   // Add a friend to a user
   addFriend(req, res) {
     console.log("adding friend");
-    console.log(req.body);
     User.findOneAndUpdate(
       { _id: req.params.userId },
-      { $addToSet: { friends: req.body } },
+      { $addToSet: { friends: req.params.friendId } },
       { runValidators: true, new: true }
     )
       .then((user) =>
