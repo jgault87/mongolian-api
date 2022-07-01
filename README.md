@@ -34,7 +34,7 @@ uses mongoose schema virtuals for friend count and reaction counts.
   * [Questions](#questions)
   
   ## Installation 
-  prerequisites: node.js, mongoDB, insomnia.
+  prerequisites: node.js, mongoDB, insomnia. <br>
   clone/fork repo then seed db using terminal command "npm i" to install dependencies in package.json. Once completed terminal command "npm run seed" to seed MongoDB database.
   start server "npm start" 
 
